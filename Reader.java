@@ -20,9 +20,7 @@ public class Reader {
 		}
 		
 		scan.close();
-		System.out.println(units);
 		
-		System.out.println(units.getUnit(2));
-		System.out.println(units.getUnit(2).statsOfType("anima"));
+		System.out.println(units.sortBy("name"));
 	}
 }

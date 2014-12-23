@@ -31,14 +31,14 @@ public class Unit {
 	
 	public String statsOfType(String type) {
 		int[] stats = new int[4];
-		if (type.equalsIgnoreCase("anima"))
-			stats[0] = (int) (unit_hp * 1.1); stats[1] = unit_atk; stats[2] = unit_def; stats[3] = (int) (unit_rec * -1.1);
-		if (type.equalsIgnoreCase("breaker"))
-			stats[0] = unit_hp; stats[1] = (int) (unit_atk * 1.1); stats[2] = (int) (unit_def * -1.1); stats[3] = unit_rec;
-		if (type.equalsIgnoreCase("guardian"))	
-			stats[0] = unit_hp; stats[1] = (int) (unit_atk * -1.1); stats[2] = (int) (unit_def * 1.1); stats[3] = unit_rec;
-		if (type.equalsIgnoreCase("oracle"))
-			stats[0] = (int) (unit_hp * -1.1); stats[1] = unit_atk; stats[2] = unit_def; stats[3] = (int) (unit_rec * 1.1);
+		if (type.equalsIgnoreCase("anima")) {
+			stats[0] = (int) (unit_hp * 1.1); stats[1] = unit_atk; stats[2] = unit_def; stats[3] = (int) (unit_rec + unit_rec * -.1); }
+		if (type.equalsIgnoreCase("breaker")) {
+			stats[0] = unit_hp; stats[1] = (int) (unit_atk * 1.1); stats[2] = (int) (unit_def + unit_def * -.1); stats[3] = unit_rec; }
+		if (type.equalsIgnoreCase("guardian")) {
+			stats[0] = unit_hp; stats[1] = (int) (unit_atk + unit_atk * -.1); stats[2] = (int) (unit_def * 1.1); stats[3] = unit_rec; }
+		if (type.equalsIgnoreCase("oracle")) {
+			stats[0] = (int) (unit_hp + unit_hp * -.1); stats[1] = unit_atk; stats[2] = unit_def; stats[3] = (int) (unit_rec * 1.1); }
 		
 		String result = "";
 		for (int i = 0; i < stats.length; i++)

@@ -22,4 +22,30 @@ public class Units {
 		
 		return units;
 	}
+
+	public String sortBy(String name) {
+		String data = "";
+		if (name.equalsIgnoreCase("name"))
+			data = sortByName();
+		
+		return data;	
+	}
+	
+	public String sortByName() {
+		String data = "";
+		ArrayList<Unit> temp = new ArrayList<Unit>();
+		
+		for (int i = 0; i < units.size() - 1; i++) {
+			for (int j = 0; j < units.size() - 1; j++) {
+				if (units.get(i).getName().compareTo(units.get(j).getName()) > 0)
+					temp.add(units.get(i));
+				else
+					temp.add(units.get(j));
+		}}
+		
+		for (int i = 0; i < temp.size(); i++)
+			data += temp.get(i) + "\n";
+		
+		return data;
+	}
 }
