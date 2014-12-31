@@ -3,9 +3,9 @@ package bfdpkg;
 public class Unit {
 	private int unit_no, unit_rarity, unit_max_lv, unit_cost, unit_hp, unit_atk, unit_def, unit_rec;
 	private String unit_name, unit_type;
-	private boolean weakness;
+	private boolean isHuman;
 	
-	public Unit(int no, int rarity, int lv, int cost, int hp, int atk, int def, int rec, String name, String type) {
+	public Unit(int no, int rarity, int lv, int cost, int hp, int atk, int def, int rec, String name, String type, String species) {
 		unit_no = no;
 		unit_rarity = rarity;
 		unit_max_lv = lv;
@@ -16,6 +16,11 @@ public class Unit {
 		unit_rec = rec;
 		unit_name = name;
 		unit_type = type;
+		
+		if (species.equalsIgnoreCase("Y"))
+			isHuman = true;
+		else
+			isHuman = false;
 	}
 	
 	public int getNo() {return unit_no;}
@@ -28,6 +33,7 @@ public class Unit {
 	public int getREC() {return unit_rec;}
 	public String getName() {return unit_name;}
 	public String getType() {return unit_type;}
+	public boolean getSpecies() {return isHuman;}
 	
 	public String statsOfType(String type) {
 		int[] stats = new int[4];
@@ -58,6 +64,11 @@ public class Unit {
 		unit += " " + unit_atk;
 		unit += " " + unit_def;
 		unit += " " + unit_rec;
+		
+		if (isHuman == true)
+			unit += " Human";
+		else
+			unit += " Other";
 		
 		return unit;
 	}

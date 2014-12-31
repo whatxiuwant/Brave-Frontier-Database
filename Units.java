@@ -8,6 +8,7 @@ public class Units {
 		units = new ArrayList<Unit>();
 	}
 	
+	public int getLength() {return units.size();}
 	public Unit getUnit(int idx) {return units.get(idx);}
 	public ArrayList<Unit> getUnits() {return units;}
 	
@@ -24,27 +25,42 @@ public class Units {
 	}
 
 	public String sortBy(String name) {
-		String data = "";
 		if (name.equalsIgnoreCase("name"))
-			data = sortByName();
+			return sortByName();
 		
-		return data;	
+		return "Could not sort.";	
 	}
 	
 	public String sortByName() {
 		String data = "";
-		ArrayList<Unit> temp = new ArrayList<Unit>();
+		String[] temp = new String[units.size()];
 		
-		for (int i = 0; i < units.size() - 1; i++) {
-			for (int j = 0; j < units.size() - 1; j++) {
-				if (units.get(i).getName().compareTo(units.get(j).getName()) > 0)
-					temp.add(units.get(i));
-				else
-					temp.add(units.get(j));
-		}}
+		for (int i = 0; i < units.size(); i++)
+			temp[i] = units.get(i).getName();
 		
-		for (int i = 0; i < temp.size(); i++)
-			data += temp.get(i) + "\n";
+		Arrays.sort(temp);
+		
+		for (int i = 0; i < temp.length; i++)
+			for (int j = 0; j < units.size(); j++)
+				if (temp[i].equals(units.get(j).getName()))
+					data += units.get(j) + "\n";
+		
+		return data;
+	}
+	
+	public String sortByATK() {
+		String data = "";
+		int[] temp = new int[units.size()];
+		
+		for (int i = 0; i < units.size(); i++)
+			temp[i] = units.get(i).getATK();
+		
+		Arrays.sort(temp);
+		
+		for (int i = temp.length - 1; i >= 0; i--)
+			for (int j = 0; j < units.size(); j++)
+				if (temp[i] == units.get(j).getATK())
+					data += units.get(j) + "\n";
 		
 		return data;
 	}

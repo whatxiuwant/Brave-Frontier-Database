@@ -14,13 +14,13 @@ public class Reader {
 					Integer.parseInt(unitData[4]), Integer.parseInt(unitData[5]), 
 					Integer.parseInt(unitData[6]), Integer.parseInt(unitData[7]), 
 					Integer.parseInt(unitData[8]), Integer.parseInt(unitData[9]),
-					unitData[1], unitData[3]);
+					unitData[1], unitData[3], unitData[10]);
 			
 			units.addUnit(unit);
 		}
 		
 		scan.close();
 		
-		System.out.println(units.sortBy("name"));
+		System.out.println(units.sortByATK());
 	}
 }
