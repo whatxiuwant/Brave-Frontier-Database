@@ -12,6 +12,27 @@ public class Units {
 	public Unit getUnit(int idx) {return units.get(idx);}
 	public ArrayList<Unit> getUnits() {return units;}
 	
+	public int getAvg(String stat) {
+		int total = 0;
+		
+		if (stat.equalsIgnoreCase("hp") || stat.equalsIgnoreCase("health"))
+			for (int i = 0; i < units.size(); i++)
+				total += units.get(i).getHP();
+		else if (stat.equalsIgnoreCase("atk") || stat.equalsIgnoreCase("attack"))
+			for (int i = 0; i < units.size(); i++)
+				total += units.get(i).getATK();
+		else if (stat.equalsIgnoreCase("def") || stat.equalsIgnoreCase("defense"))
+			for (int i = 0; i < units.size(); i++)
+				total += units.get(i).getDEF();
+		else if (stat.equalsIgnoreCase("rec") || stat.equalsIgnoreCase("recovery"))
+			for (int i = 0; i < units.size(); i++)
+				total += units.get(i).getREC();
+		else
+			return -999;
+		
+		return total / units.size();
+	}
+	
 	public void addUnit(Unit unit) {
 		units.add(unit);
 	}

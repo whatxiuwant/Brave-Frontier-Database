@@ -7,6 +7,7 @@ public class Reader {
 		File input = new File("Brave_Frontier_Database.csv");
 		Scanner scan = new Scanner(input);
 		Units units = new Units();
+		scan.nextLine();
 		
 		while (scan.hasNextLine()) {
 			String[] unitData = scan.nextLine().split(",");
@@ -21,6 +22,6 @@ public class Reader {
 		
 		scan.close();
 		
-		System.out.println(units.sortByATK());
+		System.out.println(units);
 	}
 }

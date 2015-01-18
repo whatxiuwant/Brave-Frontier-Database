@@ -1,36 +1,37 @@
-610,Bodyguard Darvanshel,4,Fire,60,13,4236,1320,1388,1164
-611,Protector Darvanshel,5,Fire,80,17,5166,1591,1652,1410
-612,Guardian Darvanshel,6,Fire,100,27,6300,1905,1955,1689
-613,Dark Axe Mariudeth,4,Water,60,13,4182,1525,1250,1089
-614,Axe King Mariudeth,5,Water,80,17,5069,1871,1497,1304
-615,Axe God Mariudeth,6,Water,100,27,6071,2354,1804,1543
-616,Great Thief Zelnite,4,Earth,60,13,4124,1405,1340,1347
-617,Noble Thief Zelnite,5,Earth,80,17,4998,1693,1614,1622
-618,Thief God Zelnite,6,Earth,100,27,6022,2003,1910,1920
-619,Thunder Beast Ahvel,4,Thunder,60,13,4097,1378,1231,1507
-620,Thunder God Esna,5,Thunder,80,17,4966,1641,1493,1794
-621,Beast God Exvehl,6,Thunder,100,27,5983,1965,1777,2161
-622,Dark Angel Azael,4,Light,60,13,4126,1473,1369,1098
-623,Wisdom Angel Azael,5,Light,80,17,5043,1764,1640,1315
-624,Seraph Azael,6,Light,100,27,6004,2100,1952,1566
-625,Dictator Lilly Matah,4,Dark,60,13,4089,1371,1371,1390
-626,Empress Lilly Matah,5,Dark,80,17,4956,1632,1633,1675
-627,Tyrant Lilly Matah,6,Dark,100,27,5971,1920,1932,1982
-715,Ember Elder Fiora,4,Fire,60,13,4172,1383,1187,1401
-716,Ember Sage Fiora,5,Fire,80,18,4967,1653,1409,1678
-717,Ember Charm Fiora,6,Fire,100,28,6132,2141,1722,2135
-718,Sea Pirate Eve,4,Water,60,13,4392,1340,1331,1331
-719,Pirate Empress Eve,5,Water,80,18,5286,1599,1589,1589
-720,Pirate Goddess Eve,6,Water,100,28,6407,1927,1914,1914
-721,Spirit Ruler Lucca,4,Earth,60,13,4312,1439,1396,1221
-722,Phantom Ruler Lucca,5,Earth,80,18,5127,1715,1662,1451
-723,Deity Ruler Lucca,6,Earth,100,28,6283,2089,2022,1757
-724,Thunder Whip Orna,4,Thunder,60,13,4281,1426,1331,1427
-725,Divine Whip Orna,5,Thunder,80,18,5096,1693,1575,1694
-726,Zeus Whip Orna,6,Thunder,100,28,6162,2035,1882,2029
-727,Holy Treasures Yujeh,4,Light,60,13,4191,1272,1468,1512
-728,Sacred Relics Yujeh,5,Light,80,18,4959,1503,1754,1807
-729,Rainbow Angel Yujeh,6,Light,100,28,6004,1792,2121,2190
-730,Dark Winged Ardin,4,Dark,60,13,4284,1569,1287,1235
-731,Dark Seraph Ardin,5,Dark,80,18,5143,1891,1533,1465
-732,Dark Demigod Ardin,6,Dark,100,28,6211,2300,1843,1755
+Number,Name,Rarity,Element,Max Level,Cost,HP,ATK,DEF,REC,isHuman
+610,Bodyguard Darvanshel,4,Fire,60,13,4236,1320,1388,1164,Y
+611,Protector Darvanshel,5,Fire,80,17,5166,1591,1652,1410,Y
+612,Guardian Darvanshel,6,Fire,100,27,6300,1905,1955,1689,Y
+613,Dark Axe Mariudeth,4,Water,60,13,4182,1525,1250,1089,Y
+614,Axe King Mariudeth,5,Water,80,17,5069,1871,1497,1304,Y
+615,Axe God Mariudeth,6,Water,100,27,6071,2354,1804,1543,Y
+616,Great Thief Zelnite,4,Earth,60,13,4124,1405,1340,1347,Y
+617,Noble Thief Zelnite,5,Earth,80,17,4998,1693,1614,1622,Y
+618,Thief God Zelnite,6,Earth,100,27,6022,2003,1910,1920,N
+619,Thunder Beast Ahvel,4,Thunder,60,13,4097,1378,1231,1507,N
+620,Thunder God Esna,5,Thunder,80,17,4966,1641,1493,1794,N
+621,Beast God Exvehl,6,Thunder,100,27,5983,1965,1777,2161,Y
+622,Dark Angel Azael,4,Light,60,13,4126,1473,1369,1098,Y
+623,Wisdom Angel Azael,5,Light,80,17,5043,1764,1640,1315,Y
+624,Seraph Azael,6,Light,100,27,6004,2100,1952,1566,Y
+625,Dictator Lilly Matah,4,Dark,60,13,4089,1371,1371,1390,Y
+626,Empress Lilly Matah,5,Dark,80,17,4956,1632,1633,1675,Y
+627,Tyrant Lilly Matah,6,Dark,100,27,5971,1920,1932,1982,Y
+715,Ember Elder Fiora,4,Fire,60,13,4172,1383,1187,1401,Y
+716,Ember Sage Fiora,5,Fire,80,18,4967,1653,1409,1678,Y
+717,Ember Charm Fiora,6,Fire,100,28,6132,2141,1722,2135,Y
+718,Sea Pirate Eve,4,Water,60,13,4392,1340,1331,1331,Y
+719,Pirate Empress Eve,5,Water,80,18,5286,1599,1589,1589,Y
+720,Pirate Goddess Eve,6,Water,100,28,6407,1927,1914,1914,Y
+721,Spirit Ruler Lucca,4,Earth,60,13,4312,1439,1396,1221,Y
+722,Phantom Ruler Lucca,5,Earth,80,18,5127,1715,1662,1451,Y
+723,Deity Ruler Lucca,6,Earth,100,28,6283,2089,2022,1757,Y
+724,Thunder Whip Orna,4,Thunder,60,13,4281,1426,1331,1427,Y
+725,Divine Whip Orna,5,Thunder,80,18,5096,1693,1575,1694,Y
+726,Zeus Whip Orna,6,Thunder,100,28,6162,2035,1882,2029,Y
+727,Holy Treasures Yujeh,4,Light,60,13,4191,1272,1468,1512,Y
+728,Sacred Relics Yujeh,5,Light,80,18,4959,1503,1754,1807,Y
+729,Rainbow Angel Yujeh,6,Light,100,28,6004,1792,2121,2190,Y
+730,Dark Winged Ardin,4,Dark,60,13,4284,1569,1287,1235,Y
+731,Dark Seraph Ardin,5,Dark,80,18,5143,1891,1533,1465,Y
+732,Dark Demigod Ardin,6,Dark,100,28,6211,2300,1843,1755,Y
