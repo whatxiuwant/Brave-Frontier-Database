@@ -23,5 +23,12 @@ public class Reader {
 		scan.close();
 		
 		System.out.println(units);
+		units.sortBy("attack");
+		System.out.println(units);								//prints ascending;
+		System.out.println(units.search("name", "Lilly"));
+		System.out.println(units.search("attack", "1500"));		//returns >= 1500;
+		System.out.println(units.getAvg("defense"));
+		System.out.println(units.getUnit((int) Math.random() * units.getLength()).statsOfType("breaker"));
+																//return stats of unit x of type x;
 	}
 }

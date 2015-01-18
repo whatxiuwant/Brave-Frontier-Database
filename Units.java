@@ -44,45 +44,86 @@ public class Units {
 		
 		return units;
 	}
-
-	public String sortBy(String name) {
-		if (name.equalsIgnoreCase("name"))
-			return sortByName();
-		
-		return "Could not sort.";	
+	
+	public void sortBy(String area) {
+		switch (area) {
+			case "name":
+				for (int j = 0; j < units.size() - 1; j++) {
+					int minIndex = j;
+					for (int k = j + 1; k < units.size(); k++) 
+						if (units.get(k).compareTo(units.get(minIndex), "name") == -1)
+							minIndex = k;
+					swap(j, minIndex);
+				}
+				break;
+			case "attack":
+				for (int j = 0; j < units.size() - 1; j++) {
+					int minIndex = j;
+					for (int k = j + 1; k < units.size(); k++) 
+						if (units.get(k).compareTo(units.get(minIndex), "attack") == -1)
+							minIndex = k;
+					swap(j, minIndex);
+				}
+				break;
+		}
 	}
 	
-	public String sortByName() {
-		String data = "";
-		String[] temp = new String[units.size()];
+	public String search(String area, String search) {
+		String str = "";
+		switch (area) {
+			case "number":
+				for (int i = 0; i < units.size(); i++)
+					if (search.equalsIgnoreCase("" + units.get(i).getNo()))
+						return units.get(i).toString();
+				break;
+			case "name":
+				for (int i = 0; i < units.size(); i++)
+					if (units.get(i).getName().indexOf(search) > 0)
+						str += units.get(i).toString() + "\n";
+				break;
+			case "rarity":
+				for (int i = 0; i < units.size(); i++)
+					if (search.equalsIgnoreCase("" + units.get(i).getRarity()))
+						str += units.get(i).toString() + "\n";
+				break;
+			case "max level":
+				for (int i = 0; i < units.size(); i++)
+					if (search.equalsIgnoreCase("" + units.get(i).getLv()))
+						str += units.get(i).toString() + "\n";
+				break;
+			case "cost":
+				for (int i = 0; i < units.size(); i++)
+					if (search.equalsIgnoreCase("" + units.get(i).getCost()))
+						str += units.get(i).toString() + "\n";
+				break;
+			case "health":
+				for (int i = 0; i < units.size(); i++)
+					if (units.get(i).getHP() >= Integer.parseInt(search))
+						str += units.get(i).toString() + "\n";
+				break;
+			case "attack":
+				for (int i = 0; i < units.size(); i++)
+					if (units.get(i).getATK() >= Integer.parseInt(search))
+						str += units.get(i).toString() + "\n";
+				break;
+			case "defense":
+				for (int i = 0; i < units.size(); i++)
+					if (units.get(i).getDEF() >= Integer.parseInt(search))
+						str += units.get(i).toString() + "\n";
+				break;
+			case "recovery":
+				for (int i = 0; i < units.size(); i++)
+					if (units.get(i).getREC() >= Integer.parseInt(search))
+						str += units.get(i).toString() + "\n";
+				break;
+		}
 		
-		for (int i = 0; i < units.size(); i++)
-			temp[i] = units.get(i).getName();
-		
-		Arrays.sort(temp);
-		
-		for (int i = 0; i < temp.length; i++)
-			for (int j = 0; j < units.size(); j++)
-				if (temp[i].equals(units.get(j).getName()))
-					data += units.get(j) + "\n";
-		
-		return data;
+		return str;
 	}
 	
-	public String sortByATK() {
-		String data = "";
-		int[] temp = new int[units.size()];
-		
-		for (int i = 0; i < units.size(); i++)
-			temp[i] = units.get(i).getATK();
-		
-		Arrays.sort(temp);
-		
-		for (int i = temp.length - 1; i >= 0; i--)
-			for (int j = 0; j < units.size(); j++)
-				if (temp[i] == units.get(j).getATK())
-					data += units.get(j) + "\n";
-		
-		return data;
+	public void swap(int j, int k) {
+		Unit temp = units.get(j);
+		units.set(j, units.get(k));
+		units.set(k, temp);
 	}
 }

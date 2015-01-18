@@ -81,4 +81,23 @@ public class Unit {
 		
 		return spaces;
 	}
+
+	public int compareTo(Unit other, String area) {
+		switch (area) {
+			case "name":
+				if (this.getName().compareTo(other.getName()) < 0)
+					return -1;
+				else if (this.getName().compareTo(other.getName()) == 0)
+					return 0;
+				return 1;
+			case "attack":
+				if (this.getATK() < other.getATK())
+					return -1;
+				else if (this.getATK() == other.getATK())
+					return compareTo(other, "name");
+				return 1;
+		}
+		
+		return -999;
+	}
 }
